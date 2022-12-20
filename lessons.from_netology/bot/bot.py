@@ -46,8 +46,7 @@ def random_add(message):
 
 @bot.message_handler(commands=["show", "print"])
 def show(message):
-    command = message.text.split(maxsplit=1)
-    date = command[1].lower()
+    date = message.text.split()[1].lower()
     text = ""
     if date in tasks:
         text = date.upper() + "\n"
